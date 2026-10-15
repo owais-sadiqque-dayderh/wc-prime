@@ -1,0 +1,19 @@
+# Install in ~/.config/systemd/user/wcprime.service, then:
+# systemctl --user daemon-reload
+# systemctl --user enable --now wcprime
+[Unit]
+Description=wc-prime Wi-Fi connection keeper
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/wcprime run
+Restart=always
+RestartSec=10
+Nice=10
+MemoryHigh=32M
+MemoryMax=64M
+CPUQuota=10%
+
+[Install]
+WantedBy=default.target

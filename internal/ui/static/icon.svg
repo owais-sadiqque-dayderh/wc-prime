@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="wc — Soft Pearl icon">
+<defs><radialGradient id="pearl-halo"><stop stop-color="#a394ff" stop-opacity=".12"/><stop offset="1" stop-color="#a394ff" stop-opacity="0"/></radialGradient></defs>
+<rect width="512" height="512" rx="112.64" fill="#0d0e14"/>
+<circle cx="256.0" cy="256.0" r="235.52" fill="url(#pearl-halo)"/>
+<svg x="15.36" y="76.8" width="481.28" height="358.4" viewBox="0 0 360 250">
+<defs><linearGradient id="wc-opal" x1="0" y1="0" x2=".8" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#f6efff"/><stop offset=".34" stop-color="#deddf4"/><stop offset=".62" stop-color="#a5a4ce"/><stop offset=".82" stop-color="#d8c9e1"/><stop offset="1" stop-color="#b6c9df"/></linearGradient><filter id="wc-depth" x="-30%" y="-40%" width="160%" height="180%"><feDropShadow dx="0" dy="3" stdDeviation="1" flood-color="#62627e" flood-opacity=".5"/><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#000" flood-opacity=".4"/></filter></defs>
+<g fill="none" stroke="url(#wc-opal)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" filter="url(#wc-depth)"><path d="M62 96 L80 157 Q85 174 93 157 L113 113 Q117 104 121 114 L140 157 Q148 174 154 156 L173 96"/><path d="M288 104 C251 78 211 100 211 132 C211 166 251 185 288 161"/></g>
+</svg>
+</svg>

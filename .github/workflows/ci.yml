@@ -1,0 +1,37 @@
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Check formatting
+        shell: bash
+        run: |
+          files=$(gofmt -l $(git ls-files '*.go'))
+          if [[ -n "$files" ]]; then
+            printf '%s\n' "$files"
+            exit 1
+          fi
+      - run: go vet ./...
+      - name: Vet Windows
+        run: GOOS=windows go vet ./...
+      - name: Vet macOS
+        run: GOOS=darwin go vet ./...
+      - run: go test -race ./...
+      - name: Cross-compile binaries
+        run: scripts/build.sh
+        env:
+          VERSION: ${{ github.sha }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wcprime-binaries
+          path: dist/
+          if-no-files-found: error

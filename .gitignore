@@ -2,3 +2,5 @@
 .local-previews/
 assets/branding/
 .DS_Store
+
+dist/
